@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=Montserrat+Alternates:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bgImage {
+    background: url('./assets/product.png');
+    background-repeat: no-repeat;
+    position: relative;
+    top: 200px;
+    left: 300px;
+    z-index: 999;
+}
