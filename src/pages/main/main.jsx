@@ -7,8 +7,17 @@ import card2 from '../../assets/card2.png'
 import card3 from '../../assets/card3.png'
 import { Link } from 'react-router-dom'
 import {FaArrowRightLong} from 'react-icons/fa6'
-import { FormControl, TextField } from '@mui/material'
+import { FormControl, InputLabel, MenuItem, OutlinedInput, Select, TextField, Typography } from '@mui/material'
 import imageCard from '../../assets/hamkor.png'
+
+const subdata = [
+    {id:1, title: 'Вертикальные прессы'},
+    {id:2, title: 'Горизонтальные прессы'},
+    {id:3, title: 'Конвейеры'},
+    {id:4, title: 'Шредеры'},
+    {id:5, title: 'Компакторы'},
+    {id:6, title: 'Контейнеры'},
+]
 
 const Main = () => {
     const [sub1, setSub1] = useState(true)
@@ -91,16 +100,21 @@ const Main = () => {
     <Layout>
         <div className={`w-[100%]`}>
             <div className={`w-[100%] h-[1200px] md:h-[917px] flex flex-col md:flex-row  justify-between `}>
-                <div className={`w-[100%] p-3 md:w-[40%] h-[100%] flex items-center mt-6 md:mt-32 flex-col `}>
-                    <p className={`font-medium leading-[58.09px] mb-[40px] text-[48px] text-[#343434]`}>
-                        Оборудование<br/> для обращения <br/>с отходами
+                <div className={`w-[100%] p-3 md:w-[40%]  flex items-center mt-6 md:mt-32 flex-col `}>
+                    <p className={`hidden md:flex font-medium leading-[58.09px] mb-[40px] text-[24px] md:text-[32px] lg:text-[48px] text-[#343434]`}>
+                        Оборудование <br/> для обращения <br/>с отходами
+                    </p>
+                    <p className={`flex md:hidden font-medium  mb-[20px] text-center text-[24px] md:text-[32px] lg:text-[48px] text-[#343434]`}>
+                        Оборудование  для обращения с отходами
                     </p>
                     <ul className='list-disc ml-6'>
-                        <li className={`font-medium text-[20px] mb-[20px] gap-3 leading-[24.38px] text-[#343434]`}>Мы НЕ занимаемся продажей красивых <br/> картинок на сайтах</li>
-                        <li className={`font-medium text-[20px] mb-[20px] gap-3 leading-[24.38px] text-[#343434]`}>Мы профессионально занимаемся <br/> поставками оборудования </li>
-                        <li className={`font-medium text-[20px] mb-[20px] gap-3 leading-[24.38px] text-[#343434]`}>Оказываем услуги сервиса и ремонта</li>
+                        <li className={`font-medium text-[18px] md:text-[20px] mb-[20px] gap-3 leading-[24.38px] text-[#343434]`}>Мы НЕ занимаемся продажей красивых <br/> картинок на сайтах</li>
+                        <li className={`font-medium text-[18px] md:text-[20px] mb-[20px] gap-3 leading-[24.38px] text-[#343434]`}>Мы профессионально занимаемся <br/> поставками оборудования </li>
+                        <li className={`font-medium text-[18px] md:text-[20px] mb-[20px] gap-3 leading-[24.38px] text-[#343434]`}>Оказываем услуги сервиса и ремонта</li>
                     </ul>
-                    <button className={`bg-[#F2DC6E] px-[28px] py-3 font-medium leading-[24.38px] text-[16px] md:text-[20px] text-[#343434] mt-4 mr-28 hover:border-2 hover:border-[#312a07] hover:bg-white hover:text-[#312a07]`}>Получить консультацию</button>
+                    <button className={`bg-[#F2DC6E] hidden md:flex hover:rounded-lg px-[28px] py-3 font-medium leading-[24.38px] text-[16px] md:text-[20px] text-[#343434] mt-4 mr-28 hover:border-2 hover:border-[#312a07] hover:bg-white hover:text-[#312a07] hover:transition-all`}>Получить консультацию</button>
+                    <button className={`bg-[#F2DC6E] w-[100%] md:hidden flex justify-center hover:rounded-lg py-3 font-medium  text-[16px] md:text-[20px] text-[#343434] mt-4 text-center hover:border-2 hover:border-[#312a07] hover:bg-white hover:text-[#312a07] hover:transition-all`}>Получить консультацию</button>
+
                 </div>
                 <div className={`w-[100%]  md:w-[24%] bgImage`}>
                 </div>
@@ -125,24 +139,46 @@ const Main = () => {
             </div>
 
             <div className='mt-32 mb-40 md:mb-0 md:mt-12 w-[100%] md:w-[70%] mx-auto hidden md:flex md:flex-row items-center justify-between relative top-[-40px]'>
-                <button className={`font-medium text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
+                <button className={`font-medium text-[18px] md:text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
                 onClick={() => click1Handler()}
                 >Вертикальные <br/> прессы</button>
-                <button className={`font-medium text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
+                <button className={`font-medium text-[18px] md:text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
                 onClick={() => click1Handler2()}
                 >Горизонтальные <br/>прессы</button>
-                <button className={`font-medium text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
+                <button className={`font-medium text-[18px] md:text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
                 onClick={() => click1Handler3()}
                 >Конвейеры</button>
-                <button className={`font-medium text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
+                <button className={`font-medium text-[18px] md:text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
                 onClick={() => click1Handler4()}
                 >Шредеры</button>
-                <button className={`font-medium text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
+                <button className={`font-medium text-[18px] md:text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
                 onClick={() => click1Handler5()}
                 >Компакторы</button>
-                <button className={`font-medium text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
+                <button className={`font-medium text-[18px] md:text-[20px] leading-[24.38px] text-center cursor-pointer text-[#343434]`}
                  onClick={() => click1Handler6()}
                 >Контейнеры</button>
+            </div>
+
+            <div className='mt-32 mb-40 md:mb-0 md:mt-12 w-[100%] md:w-[70%] mx-auto md:hidden flex md:flex-row items-center justify-between relative top-[150px] ml-5'>
+                <FormControl sx={{ mb: 2, minWidth: 120 }}>
+                {/* <Typography>Yo'nalish</Typography> */}
+                <Select
+                className="editItem"
+                // value={12}
+                // onChange={handleChange}
+                displayEmpty
+                placeholder="Mahalla mas'ullari"
+                >
+                <MenuItem value="">
+                    <em>None</em>
+                </MenuItem>
+                    {subdata?.map((item, index) => {
+                        return (
+                             <MenuItem key={index} value={item?.title}>{item?.title}</MenuItem>
+                        )
+                    })}                
+                </Select>
+            </FormControl>
             </div>
 
             <div className='mt-16 mb-40 md:mb-0 md:mt-12 w-[100%] md:w-[70%] mx-auto hidden md:flex md:flex-row justify-ar relative top-[-40px]'>
@@ -263,7 +299,7 @@ const Main = () => {
                     </FormControl>
                </div>
                <div className={`flex justify-center `}>
-                    <button className={`bg-[#F2DC6E]  w-[100%] md:w-[600px] py-3 font-medium  text-[16px] md:text-[20px] text-[#343434] hover:border-2 hover:border-[#312a07] hover:bg-white hover:text-[#312a07]`}>Получить консультацию</button>
+                    <button className={`bg-[#F2DC6E] hover:rounded-lg w-[100%] md:w-[600px] py-3 font-medium  text-[16px] md:text-[20px] text-[#343434] hover:border-2 hover:border-[#312a07] hover:bg-white hover:text-[#312a07]`}>Получить консультацию</button>
                </div>
 
             </form>

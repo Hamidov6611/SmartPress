@@ -13,3 +13,29 @@
     left: 300px;
     z-index: 999;
 }
+.gammenu {
+    background-color: rgba(0,0,0,.5);
+}
+.sidebarmenu {
+    animation-name: sidebar;
+    animation-duration: .3s;
+}
+
+@keyframes sidebar {
+    0% {
+        transform: translateX(-300px);
+        
+    }
+    25% {
+        transform: translateX(-240px);
+    }
+    50% {
+        transform: translateX(-180px);
+    }
+    75% {
+        transform: translateX(-120px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -12,7 +12,7 @@ import { FormControl, TextField } from '@mui/material'
 
 const Onas = () => {
   return (
-    <Layout>
+    <Layout title={'О компании'}>
         <div className={`w-[100%] flex flex-col md:flex-row md:justify-between`}>
             <div className={`w-[100%] md:w-[55%] mb-9 md:mb-0 mt-8 md:mt-0 flex justify-center items-center`}>
                 <div className='w-[90%] md:mb-0 md:w-[63%] mx-auto font-montserrat text-[18px] md:text-[24px]'>
@@ -147,7 +147,7 @@ const Onas = () => {
                     </FormControl>
                </div>
                <div className={`flex justify-center `}>
-                    <button className={`bg-[#F2DC6E]  w-[100%] md:w-[600px] py-3 font-medium  text-[16px] md:text-[20px] text-[#343434] hover:border-2 hover:border-[#312a07] hover:bg-white hover:text-[#312a07]`}>Получить консультацию</button>
+                    <button className={`bg-[#F2DC6E] hover:rounded-lg w-[100%] md:w-[600px] py-3 font-medium  text-[16px] md:text-[20px] text-[#343434] hover:border-2 hover:border-[#312a07] hover:bg-white hover:text-[#312a07]`}>Получить консультацию</button>
                </div>
 
             </form>
