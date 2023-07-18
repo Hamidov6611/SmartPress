@@ -6,6 +6,11 @@ import Smartres from '../src/pages/smartres/smartres.jsx'
 import SmartAbout from './pages/about/smart-about'
 import Notfound from './pages/notfound/notfound'
 import SmartService from './pages/service/service'
+import AdminLogin from './pages/dashboard/login/login'
+import MainAdmin from './pages/dashboard/admin/main-admin'
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -17,8 +22,12 @@ function App() {
         <Route path='/решения' element={<Smartres />} />
         <Route path='/Оборудование' element={<SmartAbout />} />
         <Route path='/service' element={<SmartService />} />
+        <Route path='/admin-login' element={<AdminLogin />} />
+        <Route path='/dashboard' element={<MainAdmin />} />
         <Route path='*' element={<Notfound />} />
       </Routes>
+      <ToastContainer />
+
     </>
   )
 }

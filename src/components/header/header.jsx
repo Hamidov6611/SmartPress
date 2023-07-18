@@ -24,8 +24,8 @@ const style = {
 const Header = () => {
   const [drop, setDrop] = useState(false)
   const [drop2, setDrop2] = useState(false)
-  const [sidedrop, setSideDrop] = useState(false)
-  const [sidedrop2, setSideDrop2] = useState(false)
+  const [sidedrop, setSideDrop] = useState(true)
+  const [sidedrop2, setSideDrop2] = useState(true)
   const [menu, setMenu] = useState(true)
   const [submenu, setSubMenu] = useState(false)
   const dropHandler = () => setDrop(prev => !prev)
@@ -54,7 +54,7 @@ const Header = () => {
 
               <List sx={style} component="nav" aria-label="mailbox folders">
                 <ListItem button>
-                  <Link to={`/`} className={`flex items-center h-[100%]`}>
+                  <Link to={`/`} className={`flex items-center h-[100%]`} >
                     <p className={`font-montserrat text-[20px]`}>О компании</p>
                   </Link>
                 </ListItem>
