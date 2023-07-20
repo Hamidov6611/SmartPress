@@ -39,9 +39,9 @@ const AdminHeader = ({isSidebar, setIsSidebar}) => {
 
     return (
         <div className={`w-[100%] shadow-2xl mb-4 h-[80px] flex items-center sticky top-0 z-[99]`}>
-            <div className={`w-[100%] flex justify-between items-center `} onClick={() => setShow(prev => !prev)}>
-                <DehazeIcon fontSize='large' sx={{marginLeft:"50px", color:'#004CB2', cursor:'pointer'}} onClick={() => setIsSidebar(prev => !prev)}/>
-                <div className={`mr-[50px] bg-purple-900 h-[50px] flex items-center justify-center w-[50px] rounded-[100%] cursor-pointer`}>
+            <div className={`w-[100%] flex justify-between items-center `} >
+                <DehazeIcon fontSize='large' sx={{marginLeft:"50px", color:'#21576F', cursor:'pointer'}} onClick={() => setIsSidebar(prev => !prev)}/>
+                <div className={`mr-[50px] bg-[#21576F] h-[50px] flex items-center justify-center w-[50px] rounded-[100%] cursor-pointer`} onClick={() => setShow(prev => !prev)}>
                     <p className={`text-white font-montserrat font-[600] text-[24px]`}>{admin?.login?.charAt(0)?.toUpperCase()}</p>
                 </div>
             </div>
